@@ -14,7 +14,7 @@ module.exports = [
   },
   {
     id: '102',
-    username: 'jubayer',
+    username: 'test',
     password: '1234',
     isAdmin: false,
     userData: {
@@ -27,7 +27,7 @@ module.exports = [
   },
   {
     id: '103',
-    username: 'jubayer 1',
+    username: 'notjubayerss',
     password: '1234',
     isAdmin: false,
     userData: {

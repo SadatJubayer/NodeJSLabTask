@@ -3,6 +3,7 @@ const router = express.Router();
 
 const users = require('../data');
 
+const loggedUser = require('../user');
 
 router.get('/', (req, res) => {
   res.render('login/index');
@@ -24,12 +25,14 @@ router.post('/', (req, res) => {
       if (user.password === password) {
         // Check user type
         if (user.isAdmin) return res.redirect('/admin');
+
+        // If employee then set username on localStorage and Redirect
+        loggedUser.user = username;
+
         res.redirect('/employee');
       } else {
         res.send('Invalid password');
       }
-    } else {
-      res.send('user not found');
     }
   });
 });
