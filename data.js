@@ -25,4 +25,17 @@ module.exports = [
       designation: 'manager',
     },
   },
+  {
+    id: '103',
+    username: 'jubayer 1',
+    password: '1234',
+    isAdmin: false,
+    userData: {
+      phone: '01754422008',
+      email: 'jubayer@test.com',
+      address: 'Kishoreganj',
+      gender: 'male',
+      designation: 'manager',
+    },
+  },
 ];
