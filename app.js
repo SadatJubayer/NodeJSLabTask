@@ -3,6 +3,7 @@ const boydParser = require('body-parser');
 const bodyParser = require('body-parser');
 
 // Routers
+const loginController = require('./controller/loginController');
 
 // App initialization
 const app = express();
@@ -13,6 +14,7 @@ app.set('view engine', 'ejs');
 
 // Middleware
 app.use(bodyParser());
+app.use('/login', loginController);
 
 app.get('/', (req, res) => {
   res.send('Server is running');
